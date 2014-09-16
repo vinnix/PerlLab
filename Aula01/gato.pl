@@ -1,8 +1,16 @@
 #!/bin/env perl
 #
 #
-
-while ($_ = <ARGV>) 
+print "Lista de parâmetros: @ARGV \n";
+foreach $parametro ( @ARGV )
 {
-	print $_;
+	print "Imprimindo o arquivo: ", $parametro , "\n\n";
+	$i =0;
+	open (ARQUIVO,"$parametro");
+	while ($_ = <ARQUIVO>) 
+	{
+		$i++;
+		print "$i: ", $_ ;
+	}
+	close (ARQUIVO);
 }
