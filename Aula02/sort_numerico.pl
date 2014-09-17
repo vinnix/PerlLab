@@ -11,7 +11,7 @@ sub numericamente {
 		    #  1  se for >
 }
 
-@ordenapornumero = sort numericamente @array;
+@ordenapornumero = reverse sort numericamente @array;
 
 foreach $num (@ordenapornumero)
 {
