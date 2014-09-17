@@ -13,9 +13,11 @@ foreach (keys %local)
 }
 
 %local = reverse %local;     # apenas hashes simples, como estes
+
 print "\nAgora ordenado.....\n\n";
-foreach (sort keys %local) 
+foreach $chave (sort keys %local) 
 {
-	print "Em $_ mora $local{$_}.\n";
+	print "Em $chave mora $local{$chave}.\n";
+	print "Em $chave mora $local{$chave}.\n";
 }
 
