@@ -1,0 +1,7 @@
+#!/bin/env perl
+
+use Pacote;
+# pode ser require ou do, também
+Pacote::oi();
+Pacote::tchau;
+
