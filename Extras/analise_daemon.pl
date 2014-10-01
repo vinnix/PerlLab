@@ -83,8 +83,9 @@ sub startDaemon {
    # Fork and detach from the parent process
    #
    #  eval { close DATA; }; # having __END__ will trigger __DATA__ to open and should be closed
-   print "Entrando em modo daemon.... \n\n";  
+   print "daemon.... \n\n";  
    eval { Proc::Daemon::Init; };
+   print "daemon2.... \n\n";  
 
    if ($@) {
    	     print "Variavel $@ ... \n\n";  
