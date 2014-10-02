@@ -59,9 +59,12 @@ print "KeepGoing.... $keep_going .... \n\n";
 #
 
 while ($keep_going) {
-
         # do "Analisador"'s Stuff here
-        print "$keep_going .... >>>> \n";
+        #
+	my $data = time();
+	open (ARQ, ">> teste2.log");
+        print ARQ "$keep_going ... $data .... >>>> \n";
+	close(ARQ);
 
 }
 
