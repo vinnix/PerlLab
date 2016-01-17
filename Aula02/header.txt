@@ -1,0 +1,4 @@
+coluna1;	coluna2;	coluna3;	coluna4
+coluna1;	coluna2;	coluna3;	coluna4
+coluna1;	coluna2;	coluna3;	coluna4
+
