@@ -2,6 +2,8 @@
 #
 #
 #
+
+
 $resposta = 42; # inteiro
 $pi = 3.14159265; # real
 $avocado = 6.02e23; # notação científica
