@@ -1,4 +1,4 @@
-#!/bin/env perl
+#!/usr/bin/perl
 
 use strict;
 use warnings;
@@ -87,7 +87,8 @@ sub startDaemon {
    #
    #  eval { close DATA; }; # having __END__ will trigger __DATA__ to open and should be closed
    print "daemon.... \n\n";  
-   eval { Proc::Daemon::Init; };
+   Proc::Daemon::Init(); 
+   #eval { Proc::Daemon::Init; };
    print "daemon2.... \n\n";  
 
    if ($@) {
