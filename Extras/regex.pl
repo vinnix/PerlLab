@@ -18,3 +18,10 @@ while ($inp =~ /(
 }
 
 print join "\n", @r, '';
+
+
+# Trick / Challange
+#
+# * Use Text::CSV_XS
+#   http://search.cpan.org/~hmbrand/Text-CSV_XS-1.24/CSV_XS.pm
+
