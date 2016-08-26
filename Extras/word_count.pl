@@ -10,8 +10,12 @@
 
 use strict;
 
+my $N  ;
 my $file_path = "book.txt";
-local $/;
+
+
+local $/; #this is necessary to put the entire file into a scalar variable without any problem
+
 open (my $FILE, "<", $file_path ) or die "Can't open file $file_path";
 my $word_list = <$FILE>;
 close ($FILE);
@@ -20,9 +24,8 @@ my %count_word_rank ;
 my @words = split(/\b|\n| /, $word_list);
 
 
-print $word_list;
+print "The word list is:\n $word_list\n";
 
-my $N  ;
 
 if (! defined $ARGV[0] )
 {
