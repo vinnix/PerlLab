@@ -1,6 +1,5 @@
 #!/bin/env perl
 
-#Enjoy your interview!
 
 # Imagine you are given a plain text, ASCII, English document, something like a
 # book from Project Gutenberg. Develop a concordance for the book -- the number of
