@@ -12,19 +12,30 @@
 use strict;
 
 my $file_path = "book.txt";
+local $/;
 open (my $FILE, "<", $file_path ) or die "Can't open file $file_path";
 my $word_list = <$FILE>;
 close ($FILE);
 
 my %count_word_rank ;
-my @words = split(/\b/, $word_list);
+my @words = split(/\b|\n| /, $word_list);
 
 
 print $word_list;
 
+my $N  ;
 
-print "Please enter N (max words to see in the rank).\n";
-chomp(my $N = <>); 
+if (! defined $ARGV[0] )
+{
+	print "Please enter N (max words to see in the rank).\n";
+	$N = <STDIN>; 
+	chomp($N);
+}
+else
+{
+	print "Using parameter to define N.\n";
+	$N = $ARGV[0];
+}
 
 foreach my $word (@words)
 {
@@ -42,7 +53,8 @@ foreach my $word (@words)
 
 my $word_count = 0;
 print "Sorting and couting words... \n";
-foreach my $word (sort {$count_word_rank{$a} <=> $count_word_rank{$b}  } keys %count_word_rank )
+foreach my $word (sort {$count_word_rank{$b} <=> $count_word_rank{$a}  } keys %count_word_rank )
+#foreach my $word (sort {$count_word_rank{$a} <=> $count_word_rank{$b}  } keys %count_word_rank )
 {
     $word_count++;
     print "The word \"$word\" ocours $count_word_rank{$word} time(s). \n" if $word_count <= $N; 
