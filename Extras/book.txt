@@ -1,0 +1,2 @@
+word word count count text
+that is the text
