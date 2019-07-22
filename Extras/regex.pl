@@ -25,3 +25,10 @@ print join "\n", @r, '';
 # * Use Text::CSV_XS
 #   http://search.cpan.org/~hmbrand/Text-CSV_XS-1.24/CSV_XS.pm
 
+## Inline
+
+# find emails:
+#  perl -ple 's/^.*\b(\w+@\w*.\w+)\b.*$/$1/'  source.txt  > target_emails_only.txt
+
+# from emails to handlers/logins
+# perl -ple 's/^.*\b(\w+)@\w*.\w+\b.*$/$1/'  target_emails_only.txt > target_logins_only.txt
